@@ -9,15 +9,15 @@ const ProductPage = () => {
     );
 
     useEffect(() => {
-        async function fetchList(){
-           let productList = await fetchProducts()
-           setProductItems(productList)
+        async function fetchList() {
+            let productList = await fetchProducts()
+            setProductItems(productList)
         }
 
         fetchList()
-        
+
     }, [])
-    
+
     return (
         <div className='w-full h-full'>
             <div className="container">
@@ -33,7 +33,7 @@ const ProductPage = () => {
                                 </tr>
                             </thead>
                             <tbody ref={productList}>
-                                {
+                                {products.length &&
                                     products.map((product, index) => (
                                         <tr>
                                             <td className="flex"

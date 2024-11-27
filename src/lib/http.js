@@ -6,7 +6,7 @@ export async function fetchProducts() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': '72njgfa948d9aS7gs5'
+                'x-api-key': process.env.REACT_APP_API
             },
         });
 
